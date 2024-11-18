@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JobCandidateManagement.App.Data\JobCandidateManagement.App.Data.csproj" />
+    <ProjectReference Include="..\JobCandidateManagement.UI.Models\JobCandidateManagement.UI.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+
+</Project>
