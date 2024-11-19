@@ -12,8 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JobCandidateManagement.App.Common\JobCandidateManagement.App.Common.csproj" />
-    <ProjectReference Include="..\JobCandidateManagement.App.Data\JobCandidateManagement.App.Data.csproj" />
-    <ProjectReference Include="..\JobCandidateManagement.UI.Models\JobCandidateManagement.UI.Models.csproj" />
   </ItemGroup>
 
 </Project>

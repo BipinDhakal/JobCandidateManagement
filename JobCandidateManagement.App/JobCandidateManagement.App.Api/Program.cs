@@ -1,3 +1,8 @@
+using JobCandidateManagement.App.Data.JobCandidateDbContext;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,7 +10,31 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = $"v1 ({builder.Environment.EnvironmentName})",
+        Title = "Job Candidate API",
+        Description = "Job Candidate Documentation",
+        Contact = new OpenApiContact
+        {
+            Name = "Bipin Dhakal",
+            Email = "bipindhakal05@gmail.com",
+        }
+    });
+
+    // Include XML comments 
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
+    options.IncludeXmlComments(xmlPath);
+});
+
+builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConnection"));
+});
 
 var app = builder.Build();
 
