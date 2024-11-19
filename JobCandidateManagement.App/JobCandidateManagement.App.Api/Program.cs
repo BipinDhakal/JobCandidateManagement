@@ -1,4 +1,6 @@
+using JobCandidateManagement.App.Common.Configuration;
 using JobCandidateManagement.App.Data.JobCandidateDbContext;
+using JobCandidateManagement.App.MediatR.MediatRService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -30,6 +32,10 @@ builder.Services.AddSwaggerGen(options =>
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
     options.IncludeXmlComments(xmlPath);
 });
+
+builder.Services.AddMediatR(m => m.RegisterServicesFromAssembly(typeof(MediatREntryPoint).Assembly));
+
+builder.Services.AddMapperConfiguration(builder.Configuration);
 
 builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
 {
