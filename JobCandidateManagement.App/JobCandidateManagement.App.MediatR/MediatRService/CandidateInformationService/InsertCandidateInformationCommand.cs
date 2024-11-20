@@ -48,6 +48,17 @@ namespace JobCandidateManagement.App.MediatR.MediatRService.CandidateInformation
                 };
             }
 
+            bool IsNullOrEmpty(params string[] values) => values.Any(string.IsNullOrWhiteSpace);
+            if (IsNullOrEmpty(request.candidateInfo.Email, request.candidateInfo.FirstName, request.candidateInfo.LastName, request.candidateInfo.Comments))
+            {
+                return new ResponseModel<CandidateInformationViewModel>
+                {
+                    IsSuccess = false,
+                    Message = "Required field cannot be null or empty.",
+                    StatusCode = HttpStatusCode.BadRequest
+                };
+            }
+
             // Initialize the DbContext for database operations
             try
             {
