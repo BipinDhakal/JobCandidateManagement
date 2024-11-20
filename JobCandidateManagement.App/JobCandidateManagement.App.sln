@@ -25,13 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateManagement.App.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateManagement.App.Models", "JobCandidateManagement.App.Models\JobCandidateManagement.App.Models.csproj", "{721FD471-E58E-4762-9EFD-86BEE7D7A567}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateManagement.App.Api.Test", "JobCandidateManagement.App.Api.Test\JobCandidateManagement.App.Api.Test.csproj", "{A1B9B3D7-8CA9-4F37-88AB-5318D9C54013}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateManagement.App.Common", "JobCandidateManagement.App.Common\JobCandidateManagement.App.Common.csproj", "{6EE02FEE-A97D-4A0C-9F9D-1D02446C55C8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JobCandidateManagement.UI.Models", "JobCandidateManagement.UI.Models", "{F94FAD32-A401-465B-BEBA-253BA96EE537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateManagement.UI.Models", "JobCandidateManagement.UI.Models\JobCandidateManagement.UI.Models.csproj", "{3843A424-FD94-4C53-9246-907ED01A9575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidateManagement.UI.Models", "JobCandidateManagement.UI.Models\JobCandidateManagement.UI.Models.csproj", "{3843A424-FD94-4C53-9246-907ED01A9575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidateManagement.App.Api.Test", "JobCandidateManagement.App.Api.Test\JobCandidateManagement.App.Api.Test.csproj", "{DEF75B18-919C-488A-B78D-6B64BF676EAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +55,6 @@ Global
 		{721FD471-E58E-4762-9EFD-86BEE7D7A567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{721FD471-E58E-4762-9EFD-86BEE7D7A567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{721FD471-E58E-4762-9EFD-86BEE7D7A567}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1B9B3D7-8CA9-4F37-88AB-5318D9C54013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1B9B3D7-8CA9-4F37-88AB-5318D9C54013}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1B9B3D7-8CA9-4F37-88AB-5318D9C54013}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1B9B3D7-8CA9-4F37-88AB-5318D9C54013}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6EE02FEE-A97D-4A0C-9F9D-1D02446C55C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6EE02FEE-A97D-4A0C-9F9D-1D02446C55C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE02FEE-A97D-4A0C-9F9D-1D02446C55C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +63,10 @@ Global
 		{3843A424-FD94-4C53-9246-907ED01A9575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3843A424-FD94-4C53-9246-907ED01A9575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3843A424-FD94-4C53-9246-907ED01A9575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF75B18-919C-488A-B78D-6B64BF676EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF75B18-919C-488A-B78D-6B64BF676EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF75B18-919C-488A-B78D-6B64BF676EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF75B18-919C-488A-B78D-6B64BF676EAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,9 +81,9 @@ Global
 		{74624779-BD27-473B-982C-82C3302D09ED} = {2F2AD515-B4FA-40D1-A73D-8B0FED2C8F77}
 		{11D5B1BD-6ED4-4FED-A83D-D76946084CBA} = {C05C9FCE-39F6-475E-AB01-6DBE5954133F}
 		{721FD471-E58E-4762-9EFD-86BEE7D7A567} = {12DED544-83A2-4EEC-82C5-557C956B70A9}
-		{A1B9B3D7-8CA9-4F37-88AB-5318D9C54013} = {51BBEB4D-7FB6-4092-8012-FB7C648E9FCB}
 		{6EE02FEE-A97D-4A0C-9F9D-1D02446C55C8} = {C41010E1-BC6F-4FC2-9DA2-C3B01C0EE0CC}
 		{3843A424-FD94-4C53-9246-907ED01A9575} = {F94FAD32-A401-465B-BEBA-253BA96EE537}
+		{DEF75B18-919C-488A-B78D-6B64BF676EAD} = {51BBEB4D-7FB6-4092-8012-FB7C648E9FCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D74ECE10-3623-40CF-9E4F-3495167F76BF}
